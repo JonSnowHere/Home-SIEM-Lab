@@ -1,6 +1,5 @@
 # Home-SIEM-Lab
 
-# Home SIEM-Lab
 
 ## Objective
 The Vulnerability Assessment and Penetration Testing (VAPT) project aimed to simulate real-world cyberattacks on a target system or network to identify potential vulnerabilities. The goal was to assess the security posture by performing active penetration testing and generating realistic attack scenarios. This hands-on experience provided an in-depth understanding of security risks, common vulnerabilities, and attack techniques, while reinforcing the importance of security measures to protect critical infrastructure.
