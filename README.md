@@ -1,66 +1,65 @@
-# Home-SIEM-Lab
+# Splunk Home Lab
+
+## ℹ️Overview
+
+This is the most powerful home-lab focused on setting up Splunk SIEM and real-world use cases. If you’re interested to become SOC Analyst(Tier 1/2) , this lab will help you with SOC tools, rules, queries, apps and integration.
+![Blue Sand White Beach Simple Watercolor Etsy Shop Banner (1)](https://github.com/0xrajneesh/Home-Lab/assets/40385860/592b6605-5f36-42f5-b0d0-8dbb6e4a843a)
+
+This home-lab covers:
+- [Requirement](https://github.com/0xrajneesh/Splunk-SIEM-Home-Lab?tab=readme-ov-file#requirements)
+- [Lab Diagram](https://github.com/0xrajneesh/Splunk-SIEM-Home-Lab?tab=readme-ov-file#%EF%B8%8Flab-diagram)
+- [Setting up Splunk SIEM on Ubuntu Server](https://github.com/0xrajneesh/Splunk-SIEM-Home-Lab?tab=readme-ov-file#-setting-up-splunk-siem-on-ubuntu-server)
+- [Excercises- Investigating Web-based attacks](https://github.com/0xrajneesh/Splunk-SIEM-Home-Lab?tab=readme-ov-file#excercises--investigating-web-based-attacks)
+- [Excercises- Investigating Network-based attacks](https://github.com/0xrajneesh/Splunk-SIEM-Home-Lab?tab=readme-ov-file#excercises--investigating-network-based-attacks)
+- [Live Training](https://github.com/0xrajneesh/Splunk-SIEM-Home-Lab?tab=readme-ov-file#need-training)
+
+## 🧮Requirements
+
+- **Hardware**:
+  - Ubuntu Server 22.04(for Splunk Enterprise)
+  - Windows 11 Machine
+
+- **Software**:
+  - [Splunk Enterprise]((https://www.splunk.com/en_us/download/splunk-enterprise.html )) 
+  - Splunk Universal Forwarder
+  
+  
+
+## 🖼️Lab Diagram
+
+![Home-Lab](https://github.com/0xrajneesh/Home-Lab/assets/40385860/2a1f4e02-3ae9-4d47-8e09-9370548035ed)
 
 
-## Objective
-The Vulnerability Assessment and Penetration Testing (VAPT) project aimed to simulate real-world cyberattacks on a target system or network to identify potential vulnerabilities. The goal was to assess the security posture by performing active penetration testing and generating realistic attack scenarios. This hands-on experience provided an in-depth understanding of security risks, common vulnerabilities, and attack techniques, while reinforcing the importance of security measures to protect critical infrastructure.
+## </> Setting up Splunk SIEM on Ubuntu Server
+- Install Splunk Enterprise software on Ubuntu server    
+- Install Splunk [Security Essentials App]((https://splunkbase.splunk.com/app/3435))  
+- Import [BOTS V2 Dataset](https://s3.amazonaws.com/botsdataset/botsv2/botsv2_data_set_attack_only.tgz)  
 
-### Skills Learned
+## 🧑‍💻Excercises- Investigating Web-based attacks
+- **SQL Injection**: Analyze web logs to detect potential SQL injection attempts.(Hint: Look for unusual characters or SQL keywords used in URI parameters, such as ' or 1=1.)  
+- **Cross-Site Scripting (XSS)**: Monitor web logs for signs of Cross-Site Scripting (XSS) attacks.(Hint: Search for requests containing suspicious JavaScript keywords like "script", "<script>", or "onload".)   
+- **Cross-Site Request Forgery**: Identify potential Cross-Site Request Forgery (CSRF) attacks in web logs.(Hint: Look for requests with unexpected or unauthorized actions, such as changes in user settings or profile information.)  
+- **Directory Traversal**: Search for indications of Directory Traversal attacks in web logs.(Hint:  Check for requests containing "../" or "%2e%2e/" sequences in the URI, attempting to access files outside the web root.)
+- **Brute Force**: Monitor access logs for patterns indicative of brute force attacks.(Hint: Look for repeated login attempts from the same IP address or requests with multiple failed authentication attempts.)  
+- **Session Hijacking**: Detect potential session hijacking attempts by analyzing web logs.(Hint: Look for multiple logins from different IP addresses for the same user account in a short time frame.)  
+- **Remote Code Execution**: Identify potential Remote Code Execution (RCE) attempts in web logs.(Hint: Look for requests with unusual file extensions or commands that may indicate attempts to execute arbitrary code on the server.)  
+- **XXL External Entity**: Search for indications of XML External Entity (XXE) attacks in web logs.(Hint: Look for requests with XML payloads containing references to external entities or unusual XML processing instructions.)  
+- **Insecure Deserialization Detection**: Detect potential Insecure Deserialization attempts in web logs.(Hint: Look for requests with serialized data or references to known serialization libraries vulnerable to exploitation.)  
+- **SSRF Detection**: Monitor web logs for signs of Server-Side Request Forgery (SSRF) attacks.(Hint: Look for requests with URLs pointing to internal or sensitive resources, or containing unexpected protocols like "file://" or "gopher://".)
 
-- Mastery of penetration testing techniques and methodologies.
-- Ability to identify and exploit vulnerabilities in various systems and applications.
-- Knowledge of web application security and common vulnerabilities such as SQL injection, XSS, and RCE.
-- Proficiency in using tools for vulnerability scanning, exploitation, and post-exploitation.
-- Strengthened understanding of ethical hacking practices and legal implications.
+## 🧑‍💻Excercises- Investigating Network-based attacks
+- **Port Scanning**: Detect port scanning activities in network logs.(Hint: Look for a large number of connection attempts from the same source IP to different destination ports within a short time frame.)  
+- **DDoS Attack**: Identify Distributed Denial of Service (DDoS) attacks in network logs.(Hint:  Watch for a sudden increase in traffic volume or a high number of connection requests to a single destination IP or port from multiple source IPs.)   
+- **Brute Force SSH Attack**: Detect brute force SSH login attempts in authentication logs.(Hint: Check for repeated failed login attempts from the same source IP address within a short time frame.)  
+- **DNS Tunneling**:  Identify DNS tunneling activities in DNS logs.(Hint: Look for DNS queries with abnormally large query sizes, which may indicate DNS tunneling attempts to exfiltrate data.)
+- **Malicious Payload**: Detect known malicious payloads in network logs using Suricata IDS or Zeek IDS.(Hint:  Search for network logs containing signatures or indicators associated with known malware or exploit kits.)  
+- **Malicious File Download**:  Detect malicious file downloads in HTTP server logs.(Hint: Search for HTTP requests with file extensions commonly associated with malware, such as ".exe" or ".dll".)  
+- **Network Reconnaissance**: Identify network reconnaissance activities in network logs using Suricata IDS.(Hint: Look for network logs containing events indicative of port scanning activities, such as multiple connection attempts from the same source IP to different destination IPs.)  
+- **Man-in-the-Middle (MitM) Attack**: Detect potential Man-in-the-Middle (MitM) attacks in network logs.(Hint: Look for network logs indicating rejected connections or SYN packets without completing the TCP handshake, which may suggest ARP spoofing or MitM attacks.)  
+- **Data Exfiltration**:  Identify data exfiltration attempts in network logs.(Hint: Look for network logs containing large outbound data transfers or unusually high volumes of data transmitted from internal to external destinations, which may indicate data exfiltration attempts.)
 
-### Tools Used
+## Need Training
+If you want to get hands-on training on Splunk SIEM and the above use case, then join our live Splunk Training.    
 
-- **Kali Linux** for penetration testing and security auditing.
-- **Burp Suite** for web vulnerability scanning and exploitation.
-- **Metasploit Framework** for exploitation and post-exploitation.
-- **Nmap** for network discovery and vulnerability scanning.
-- **OWASP ZAP** for automated security testing of web applications.
-- **Wireshark** for network traffic analysis.
 
-## Steps
 
-Below are the key steps taken in the VAPT process:
-
-### 1. Reconnaissance and Information Gathering
-In the reconnaissance phase, initial information about the target system was gathered through open-source intelligence (OSINT), social engineering, and network scanning techniques.
-
-*Ref 1: Nmap Scan Results*  
-This screenshot shows the results of a network scan using Nmap, identifying open ports and services on the target machine.
-
-![Nmap Scan](link-to-image)
-
-### 2. Vulnerability Scanning
-During this phase, tools like Nessus and OpenVAS were used to identify vulnerabilities in the system and applications, categorizing them based on severity.
-
-*Ref 2: Nessus Scan Report*  
-Here, Nessus scan results display a list of detected vulnerabilities, ranked by their criticality.
-
-![Nessus Scan](link-to-image)
-
-### 3. Exploitation
-Once vulnerabilities were identified, exploitation techniques were employed to verify their existence and assess their impact.
-
-*Ref 3: Metasploit Exploit*  
-This screenshot shows a successful exploit using Metasploit, gaining unauthorized access to the target system.
-
-![Metasploit Exploit](link-to-image)
-
-### 4. Post-Exploitation
-Post-exploitation focused on maintaining access and escalating privileges to gather sensitive information or pivot to other systems within the network.
-
-*Ref 4: Post-Exploitation Shell*  
-This image captures the post-exploitation shell session, where elevated privileges were used to extract sensitive data.
-
-![Post-Exploitation Shell](link-to-image)
-
-### 5. Reporting
-Finally, all findings were documented, including detailed descriptions of vulnerabilities, exploits, and remediation recommendations.
-
-*Ref 5: Vulnerability Report*  
-This screenshot shows a portion of the penetration testing report, highlighting critical vulnerabilities and suggested fixes.
-
-![Vulnerability Report](link-to-image)
