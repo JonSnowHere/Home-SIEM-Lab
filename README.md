@@ -142,9 +142,9 @@ Contact
 
 For questions, feedback, or contributions, feel free to reach out:
 
-Email: [Your Email Address]
 
-LinkedIn: [Your LinkedIn Profile]
+
+
 
 GitHub: [Your GitHub Profile]
 
