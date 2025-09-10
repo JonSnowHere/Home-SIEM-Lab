@@ -32,7 +32,7 @@ This lab includes the following components:
 
 SIEM Platform:
 
-Example: ELK Stack (Elasticsearch, Logstash, Kibana) or Security Onion.
+Example: Wazuh (EDR+SIEM).
 
 Optional: Splunk (free tier for limited data ingestion).
 
