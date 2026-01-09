@@ -72,14 +72,6 @@ At least 16GB of RAM (recommended for virtualization).
 
 Multi-core processor.
 
-Software:
-
-Virtualization tool (e.g., VirtualBox, VMware).
-
-Operating systems (e.g., Ubuntu, Windows Server).
-
-SIEM platform (e.g., ELK Stack, Security Onion).
-
 Setup Instructions
 
 Prepare Your Environment:
