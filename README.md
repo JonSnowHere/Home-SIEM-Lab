@@ -138,7 +138,7 @@ For questions, feedback, or contributions, feel free to reach out:
 
 
 
-GitHub: [Your GitHub Profile]
+GitHub: jonsnowhere
 
 License
 
